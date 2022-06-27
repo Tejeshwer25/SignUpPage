@@ -1,0 +1,21 @@
+.hero {
+  margin-right: 1rem;
+}
+
+.hero > h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+
+  color: var(--primary-text-color);
+}
+
+.hero > h1 > span {
+  display: block;
+  color: var(--brand-color);
+}
+
+.hero > p {
+  color: var(--secondary-text-color);
+}
