@@ -1,0 +1,19 @@
+.socialLogin {
+  margin: 2rem 0rem;
+  font-size: 1.25rem;
+}
+
+.socialLogin__action {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 1.5rem 0rem;
+}
+
+.socialLogin__action > img {
+  width: 2rem;
+  margin: 0rem 1rem;
+  cursor: pointer;
+}

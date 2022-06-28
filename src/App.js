@@ -7,6 +7,7 @@ import Form from "./Components/Form/Form";
 import Modal from "./Components/Modal/Modal";
 
 import "./App.css";
+import SocialLogin from "./Components/SocialLogin/SocialLogin";
 
 const App = () => {
   // Stores the form data
@@ -25,13 +26,16 @@ const App = () => {
         <Hero />
         <div className="container">
           {!userSignedUp ? (
-            <Form
-              data={data}
-              setData={setData}
-              setUserSignedUp={setUserSignedUp}
-            />
+            <div>
+              <Form
+                data={data}
+                setData={setData}
+                setUserSignedUp={setUserSignedUp}
+              />
+              <SocialLogin />
+            </div>
           ) : (
-            <Modal data={data} />
+            <Modal data={data} setData={setData} setUserSignedUp={setUserSignedUp} />
           )}
         </div>
       </div>

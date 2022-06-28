@@ -1,6 +1,17 @@
 import styles from "./Modal.module.css";
 
-const Modal = ({ data }) => {
+const Modal = ({ data, setData, setUserSignedUp }) => {
+  function logoutUser() {
+    setData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      newsletter: false,
+    });
+    setUserSignedUp(false);
+  }
+
   return (
     <div className={styles.modal}>
       <h2>You are signed Up...</h2>
@@ -21,6 +32,8 @@ const Modal = ({ data }) => {
       <p>
         Newsletter subscription: <span>{data.newsletter ? "Yes" : "No"}</span>
       </p>
+
+      <button onClick={logoutUser}>Logout</button>
     </div>
   );
 };
